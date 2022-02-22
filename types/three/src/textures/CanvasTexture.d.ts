@@ -1,7 +1,7 @@
 import { Texture } from './Texture';
 import { Mapping, Wrapping, TextureFilter, PixelFormat, TextureDataType } from '../constants';
 
-export class CanvasTexture extends Texture {
+export class CanvasTexture extends Texture<HTMLCanvasElement> {
     /**
      * @param canvas
      * @param [format=THREE.RGBAFormat]

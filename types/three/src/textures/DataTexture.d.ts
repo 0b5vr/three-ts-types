@@ -1,7 +1,7 @@
 import { Texture } from './Texture';
 import { Mapping, Wrapping, TextureFilter, PixelFormat, TextureDataType, TextureEncoding } from '../constants';
 
-export class DataTexture extends Texture {
+export class DataTexture extends Texture<ImageData> {
     /**
      * @param data
      * @param width
@@ -30,9 +30,6 @@ export class DataTexture extends Texture {
         anisotropy?: number,
         encoding?: TextureEncoding,
     );
-
-    get image(): ImageData;
-    set image(value: ImageData);
 
     /**
      * @default false

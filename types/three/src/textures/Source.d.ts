@@ -1,7 +1,7 @@
 /**
  * Represents the data source of a texture.
  */
-export class Source {
+export class Source<TSource = any> {
     /**
      * @param [data] The data definition of a texture. default is **null**.
      */
@@ -10,7 +10,7 @@ export class Source {
     /**
      * The actual data of a texture. The type of this property depends on the texture that uses this instance.
      */
-    data: any;
+    data: TSource;
 
     /**
      * Set this to **true** to trigger a data upload to the GPU next time the source is used.

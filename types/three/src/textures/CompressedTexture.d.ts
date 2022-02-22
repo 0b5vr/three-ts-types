@@ -8,7 +8,7 @@ import {
     TextureEncoding,
 } from '../constants';
 
-export class CompressedTexture extends Texture {
+export class CompressedTexture extends Texture<{ width: number; height: number }> {
     /**
      * @param mipmaps
      * @param width
@@ -37,9 +37,6 @@ export class CompressedTexture extends Texture {
         anisotropy?: number,
         encoding?: TextureEncoding,
     );
-
-    get image(): { width: number; height: number };
-    set image(value: { width: number; height: number });
 
     mipmaps: ImageData[];
 

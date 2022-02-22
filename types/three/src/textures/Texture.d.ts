@@ -12,7 +12,7 @@ import {
     TextureEncoding,
 } from '../constants';
 
-export class Texture extends EventDispatcher {
+export class Texture<TSource = any> extends EventDispatcher {
     /**
      * @param [image]
      * @param [mapping=THREE.Texture.DEFAULT_MAPPING]
@@ -51,7 +51,7 @@ export class Texture extends EventDispatcher {
      * The data definition of a texture. A reference to the data source can be shared across textures.
      * This is often useful in context of spritesheets where multiple textures render the same data but with different texture transformations.
      */
-    source: Source;
+    source: Source<TSource>;
 
     /**
      * An image object, typically created using the {@link TextureLoader.load} method.

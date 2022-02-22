@@ -27,8 +27,6 @@ export class CubeTexture extends Texture {
         encoding?: TextureEncoding,
     );
 
-    images: any; // returns and sets the value of Texture.image in the codde ?
-
     /**
      * @default false
      */
