@@ -1,7 +1,7 @@
 import { IUniform } from './UniformsLib';
 
-export interface Shader {
-    uniforms: { [uniform: string]: IUniform };
+export interface Shader<TUniforms = { [uniform: string]: IUniform }> {
+    uniforms: TUniforms;
     vertexShader: string;
     fragmentShader: string;
 }

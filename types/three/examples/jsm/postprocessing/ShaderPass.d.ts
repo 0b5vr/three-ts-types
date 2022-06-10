@@ -1,11 +1,11 @@
-import { ShaderMaterial } from '../../../src/Three';
+import { IUniform, Shader, ShaderMaterial } from '../../../src/Three';
 
 import { Pass } from './Pass';
 
-export class ShaderPass extends Pass {
-    constructor(shader: object, textureID?: string);
+export class ShaderPass<TUniforms = { [name: string]: IUniform }> extends Pass {
+    constructor(shader: Shader<TUniforms>, textureID?: string);
     textureID: string;
-    uniforms: { [name: string]: { value: any } };
+    uniforms: TUniforms;
     material: ShaderMaterial;
     fsQuad: object;
 }
